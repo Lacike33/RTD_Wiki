@@ -8,7 +8,7 @@ and offers a *simple* and *intuitive* API.
 
 Lumache has its documentation hosted on Read the Docs.
 
-Posledny zmena pred novym releasom ..
+Posledna zmena pred novym releasom .. **v1.0.1**
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
