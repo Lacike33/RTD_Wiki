@@ -10,6 +10,8 @@ Lumache has its documentation hosted on Read the Docs.
 
 Zmena bez zadania tagu ...
 
+Toto je nova zmena ...
+
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
