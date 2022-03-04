@@ -25,4 +25,5 @@ Contents
 .. toctree::
 	usage
 	api
-	test
+	test_01
+	test_02

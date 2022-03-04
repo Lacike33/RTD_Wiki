@@ -4,4 +4,4 @@ Test
 Testovacia stranka
 ------------------
 
-Toto je testovacia stranka.
+Toto je 1. testovacia stranka.
