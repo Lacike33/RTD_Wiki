@@ -23,6 +23,6 @@ Contents
 --------
 
 .. toctree::
-
-   usage
-   api
+	usage
+	api
+	test
