@@ -1,8 +1,7 @@
 Test
 ====
 
-.. autosummary::
-   :toctree: generated
-
+Testovacia stranka
+-----------------
 
 Toto je testovacia stranka.
