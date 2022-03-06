@@ -85,7 +85,7 @@ V pripade ze chceme do **MAIL** sablony posielat aj data , tak mame k dispozicii
 
 V konstruktore vytvorenej mailablle triedy musime zadefinovat model z ktoreho budeme citat data:
 
-.. code-block:: php
+.. code-block::
    public $order;
    public function __construct(Order $order)
    {
