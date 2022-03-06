@@ -35,6 +35,9 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_
    MAIL_FROM_NAME="LV consult s.r.o."
    MAIL_ENCRYPTION=tls
 
+Fake nastavenie
+---------------
+
 Email bude chodit namiesto priamo userovi do schranky na **FAKE** server.
 Pre zobrazenie mailov ako aj konfiguracnych udajov pouzi login na `mailtrap.io <https://mailtrap.io/signin>`_ :
 
@@ -66,3 +69,7 @@ V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit pa
 -> subject
 -> view
 -> attach
+
+.. code-block:: php
+   return $this->from('Meno_odosielatela','example@example.com')
+   				->view('emails.orders.shipped');
