@@ -73,3 +73,192 @@ V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit pa
 .. line-block::
    return $this->from('Meno_odosielatela','example@example.com')
    >view('emails.orders.shipped');
+
+V pripade ze nechceme **MAIL** formatovat tak posleme PLAIN text takto
+
+.. line-block::
+   ->text('emails.orders.shipped_plain');
+
+V pripade ze chceme do **MAIL** sablony posielat aj data , tak mame k dispozicii 2 moznosti :
+
+1. Via Public Properties
+
+V konstruktore vytvorenej mailablle triedy musime zadefinovat model z ktoreho budeme citat data:
+
+.. code-block:: php
+   public $order;
+   public function __construct(Order $order)
+   {
+       $this->order = $order;
+   }
+
+2. Via The with Method
+
+V takomto pripade mozeme do VIEW poslat aj pole s datami "**with**"
+
+.. code-block:: php
+   public function build()
+   {
+       return $this->view('emails.orders.shipped')
+                    ->with([
+                        'orderName' => $this->order->name,
+                        'orderPrice' => $this->order->price,
+                    ]);
+   }
+
+Odosielanie priloh
+------------------
+
+.. code-block:: php
+   public function build()
+   {
+       return $this->view('emails.orders.shipped')
+                   ->attach('/path/to/file');
+   }
+
+alebo
+
+.. code-block:: php
+   public function build()
+   {
+       return $this->view('emails.orders.shipped')
+                   ->attach('/path/to/file', [
+                       'as' => 'name.pdf',
+                       'mime' => 'application/pdf',
+                   ]);
+   }
+
+Odoslanie obrazku
+-----------------
+
+.. line-block::
+   <body>
+    Here is an image:
+
+    <img src="{{ $message->embed($pathToFile) }}">
+   </body>
+
+Markdown mail
+-------------
+
+Zakladom je mat blade s pouzitim Markdown komponentami. Prikaz na vygenerovanie VIEW :
+
+.. line-block::
+   php artisan make:mail <Nazov_triedy> --markdown=<Cesta_k_suboru>          // s pouzitim sablony Markdown
+
+   napr.
+
+.. line-block::
+   php artisan make:mail OrderShipped --markdown=emails.orders.shipped
+
+V pripade pouzitia Markdown sablony v metode **build** pouzijeme metodu **markdown** :
+
+.. line-block::
+   return $this->from('example@example.com')
+                ->markdown('emails.orders.shipped');
+
+Kustomizacia Markdown komponentov
+---------------------------------
+
+V prvom rade musime mat vyexportovane MARKDOWN komponenty do vlastnej struktury :
+
+.. code-block:: console
+   php artisan vendor:publish --tag=laravel-mail
+
+Po vygenerovani sa komponenty nachadzaju v ```resources/views/vendor/mail```
+
+Kustomizacia CSS Markdown komponentov
+*************************************
+
+Vygenerovane komponenty obsahuju defaultny css subor ```default.css``` pre kazdu temu  ```resources/views/vendor/mail/html/themes``` ktoreho upravou sa zmeny prejavia automaticky.
+
+V pripade ze si chceme vytvorit vlastnu themu, tak ju vytvorime tu ```resources/views/vendor/mail/html/themes``` ale nesmieme zabudnut na nastavenie temy v configu ```config\mail```
+
+Odoslanie mailu
+---------------
+
+.. code-block:: php
+	Mail::to($request->user())->send(new OrderShipped($order));
+
+alebo
+
+.. code-block:: php
+	Mail::to($request->user())
+		->cc($moreUsers)
+		->bcc($evenMoreUsers)
+		->send(new OrderShipped($order));
+
+MAIL je mozne odoslat priamo do prehliadaca :
+
+.. code-block:: php
+	Route::get('/mailable', function () {
+    	$invoice = App\Invoice::find(1);
+
+		return new App\Mail\InvoicePaid($invoice);
+	});
+
+Dalsou moznostou je vyrenderovanie Mailu. Metoda **render** vráti vyhodnotený obsah Mailu ako reťazec
+
+.. line-block::
+   $invoice = App\Invoice::find(1);
+
+   return (new App\Mail\InvoicePaid($invoice))->render();
+
+Lokalizovanie jazyka mailu
+--------------------------
+
+.. code-block:: php
+	Mail::to($request->user())->send(
+    (new OrderShipped($order))->locale('es')
+	);
+
+Queueing Mail
+-------------
+
+Keďže odosielanie e-mailových správ môže drasticky predĺžiť čas odozvy vašej aplikácie, mnohí vývojári sa rozhodnú do frontu odosielať e-mailové správy.
+Laravel to uľahčuje pomocou zabudovaného rozhrania API pre jednotnú frontu.
+Ak chcete na fronte e-mailovú správu, použite metódu frontu na priečke pošty po zadaní príjemcov správy:
+
+.. code-block:: php
+   Mail::to($request->user())
+		->cc($moreUsers)
+		->bcc($evenMoreUsers)
+		->queue(new OrderShipped($order));
+
+Táto metóda sa automaticky postará o stlačenie úlohy na frontu, aby sa správa odoslala na pozadí. Samozrejme, pred použitím tejto funkcie budete musieť nakonfigurovať svoje fronty `Queues <https://laravel.com/docs/9.x/queues>`.
+
+* [Admin-LTE](AdminLte)
+* [Ajax](Ajax)
+* [API](Api)
+* [Autentifikácia a Role](Autentifikacia)
+* [BotMan](Botman)
+* [Cache &  Events](Cache)
+* [Carbon](Carbon)
+* [Commands](Commands)
+* [Database](Database)
+* [Export & Import](Export)
+* [Fake dáta](Seed)
+* [Files](Files)
+* [Flash messages](Flash)
+* [Helper files](Helpers)
+* [Images](Images)
+* [Inštalácia](Install)
+* [Login cez sociálnu sieť](Login)
+* [Logovanie](Log)
+* [Mail verifikacia](MailVerify)
+* [Migrácia](Migrate)
+* [Middleware](Middleware)
+* [Module System](ModuleSystem)
+* [Multijazyčná stránka (Translate)](Multilanguage)
+* [Nasadenie app do produkčného prostredia](Start)
+* [Packages](Packages)
+* [Platobna brana](StripePayment)
+* [PDF wrapper](PDFwraper)
+* [Routing](Routing)
+* [Services](Services)
+* [Sťahovanie súborov](Download)
+* [Subdomain routing](SubdomainRouting)
+* [Traits](Trait)
+* [Valet](ValetPlugin)
+
+
