@@ -85,7 +85,7 @@ V pripade ze chceme do **MAIL** sablony posielat aj data , tak mame k dispozicii
 
 V konstruktore vytvorenej mailablle triedy musime zadefinovat model z ktoreho budeme citat data:
 
-.. code-block::
+.. line-block::
    public $order;
    public function __construct(Order $order)
    {
@@ -96,7 +96,7 @@ V konstruktore vytvorenej mailablle triedy musime zadefinovat model z ktoreho bu
 
 V takomto pripade mozeme do VIEW poslat aj pole s datami "**with**"
 
-.. code-block:: php
+.. line-block::
    public function build()
    {
        return $this->view('emails.orders.shipped')
@@ -109,7 +109,7 @@ V takomto pripade mozeme do VIEW poslat aj pole s datami "**with**"
 Odosielanie priloh
 ------------------
 
-.. code-block:: php
+.. line-block::
    public function build()
    {
        return $this->view('emails.orders.shipped')
@@ -118,7 +118,7 @@ Odosielanie priloh
 
 alebo
 
-.. code-block:: php
+.. line-block::
    public function build()
    {
        return $this->view('emails.orders.shipped')
@@ -162,7 +162,7 @@ Kustomizacia Markdown komponentov
 
 V prvom rade musime mat vyexportovane MARKDOWN komponenty do vlastnej struktury :
 
-.. code-block:: console
+.. line-block::
    php artisan vendor:publish --tag=laravel-mail
 
 Po vygenerovani sa komponenty nachadzaju v ```resources/views/vendor/mail```
@@ -177,12 +177,12 @@ V pripade ze si chceme vytvorit vlastnu themu, tak ju vytvorime tu ```resources/
 Odoslanie mailu
 ---------------
 
-.. code-block:: php
+.. line-block::
 	Mail::to($request->user())->send(new OrderShipped($order));
 
 alebo
 
-.. code-block:: php
+.. line-block::
 	Mail::to($request->user())
 		->cc($moreUsers)
 		->bcc($evenMoreUsers)
@@ -190,7 +190,7 @@ alebo
 
 MAIL je mozne odoslat priamo do prehliadaca :
 
-.. code-block:: php
+.. line-block::
 	Route::get('/mailable', function () {
     	$invoice = App\Invoice::find(1);
 
@@ -207,7 +207,7 @@ Dalsou moznostou je vyrenderovanie Mailu. Metoda **render** vráti vyhodnotený 
 Lokalizovanie jazyka mailu
 --------------------------
 
-.. code-block:: php
+.. line-block::
 	Mail::to($request->user())->send(
     (new OrderShipped($order))->locale('es')
 	);
@@ -219,7 +219,7 @@ Keďže odosielanie e-mailových správ môže drasticky predĺžiť čas odozvy
 Laravel to uľahčuje pomocou zabudovaného rozhrania API pre jednotnú frontu.
 Ak chcete na fronte e-mailovú správu, použite metódu frontu na priečke pošty po zadaní príjemcov správy:
 
-.. code-block:: php
+.. line-block::
    Mail::to($request->user())
 		->cc($moreUsers)
 		->bcc($evenMoreUsers)
