@@ -1,7 +1,7 @@
-Test
-====
+Laravel
+=======
 
-Testovacia stranka
-------------------
+Tu bude zoznam dalsich sekcii :
 
-Toto je 1. testovacia stranka.
+* prvy
+* druhy
