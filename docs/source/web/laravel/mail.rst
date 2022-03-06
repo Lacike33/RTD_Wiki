@@ -38,7 +38,6 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_
 Email bude chodit namiesto priamo userovi do schranky na **FAKE** server.
 Pre zobrazenie mailov ako aj konfiguracnych udajov pouzi login na `mailtrap.io <https://mailtrap.io/signin>`_ :
 
-::
 user: allacino@gmail.com
 password:
 
@@ -50,3 +49,22 @@ password:
 	MAIL_PASSWORD=448c2b8dbfeddf
 	MAIL_ENCRYPTION=tls
 
+Mailablle class
+---------------
+
+Pomocnu triedu (Mailablle class) na odosielanie mailov je mozne vytvorit nasledujucimi prikazmy:
+
+.. code-block:: console
+   php artisan make:mail <Nazov_triedy>                                      // s pouzitim Blade view
+   php artisan make:mail <Nazov_triedy> --markdown=<Cesta_k_suboru>          // s pouzitim sablony Markdown
+   php artisan vendor:publish --tag=laravel-mail                             // export markdown komponent do vlastnej struktury
+
+V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit parametre ako :
+
+-> from
+
+-> subject
+
+-> view
+
+-> attach
