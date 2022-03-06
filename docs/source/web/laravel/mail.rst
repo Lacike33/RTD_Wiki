@@ -1,4 +1,4 @@
-.. _doc_laravel_mail:
+
 
 Mail
 ====
