@@ -65,10 +65,10 @@ Pomocnu triedu (Mailablle class) na odosielanie mailov je mozne vytvorit nasledu
 V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit parametre ako :
 
 .. line-block::
--> from
--> subject
--> view
--> attach
+   -> from
+   -> subject
+   -> view
+   -> attach
 
 .. code-block:: php
    return $this->from('Meno_odosielatela','example@example.com')
