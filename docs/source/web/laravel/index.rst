@@ -13,39 +13,5 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>` 
    :maxdepth: 1
    :name: laravel
 
-	web/laravel/mail
-	web/laravel/vue
-
-* [Admin-LTE](AdminLte)
-* [Ajax](Ajax)
-* [API](Api)
-* [Autentifikácia a Role](Autentifikacia)
-* [BotMan](Botman)
-* [Cache &  Events](Cache)
-* [Carbon](Carbon)
-* [Commands](Commands)
-* [Database](Database)
-* [Export & Import](Export)
-* [Fake dáta](Seed)
-* [Files](Files)
-* [Flash messages](Flash)
-* [Helper files](Helpers)
-* [Images](Images)
-* [Inštalácia](Install)
-* [Login cez sociálnu sieť](Login)
-* [Logovanie](Log)
-* [Mail verifikacia](MailVerify)
-* [Migrácia](Migrate)
-* [Middleware](Middleware)
-* [Module System](ModuleSystem)
-* [Multijazyčná stránka (Translate)](Multilanguage)
-* [Nasadenie app do produkčného prostredia](Start)
-* [Packages](Packages)
-* [Platobna brana](StripePayment)
-* [PDF wrapper](PDFwraper)
-* [Routing](Routing)
-* [Services](Services)
-* [Sťahovanie súborov](Download)
-* [Subdomain routing](SubdomainRouting)
-* [Traits](Trait)
-* [Valet](ValetPlugin)
+	mail
+	vue
