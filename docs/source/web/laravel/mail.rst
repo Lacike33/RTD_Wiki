@@ -70,6 +70,6 @@ V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit pa
    -> view
    -> attach
 
-.. code-block:: php
+.. line-block::
    return $this->from('Meno_odosielatela','example@example.com')
    >view('emails.orders.shipped');
