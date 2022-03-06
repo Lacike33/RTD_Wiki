@@ -13,8 +13,6 @@ Sumár praktickej dokumentácie a packegov 3. strán nájdeš `TU <https://githu
 	:maxdepth: 3
 
 	web/laravel/index
-	web/laravel/mail
-	web/laravel/vue
 	web/sphinx/index
 
 .. toctree::
