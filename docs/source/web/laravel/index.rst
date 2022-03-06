@@ -1,8 +1,4 @@
 Laravel
 =======
 
-.. toctree::
-   :maxdepth: 1
-
-	mail
-	vue
+tu by mal byt toctree ...
