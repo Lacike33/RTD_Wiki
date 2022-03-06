@@ -72,4 +72,4 @@ V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit pa
 
 .. code-block:: php
    return $this->from('Meno_odosielatela','example@example.com')
-   				->view('emails.orders.shipped');
+   >view('emails.orders.shipped');
