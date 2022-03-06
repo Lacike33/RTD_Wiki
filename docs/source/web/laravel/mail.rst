@@ -35,14 +35,18 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_
    MAIL_FROM_NAME="LV consult s.r.o."
    MAIL_ENCRYPTION=tls
 
+Email bude chodit namiesto priamo userovi do schranky na **FAKE** server.
+Pre zobrazenie mailov ako aj konfiguracnych udajov pouzi login na `mailtrap.io <https://mailtrap.io/signin>`_ :
+
 ::
-   MAIL_DRIVER=smtp
-   MAIL_HOST=smtp.forpsi.com
-   MAIL_PORT=587
-   MAIL_USERNAME=postmaster@lvconsult.sk
-   MAIL_PASSWORD=vBUP827_xM
-   MAIL_ENCRYPTION=null
-   MAIL_FROM_ADDRESS=postmaster@lvconsult.sk
-   MAIL_FROM_NAME="LV consult s.r.o."
-   MAIL_ENCRYPTION=tls
+user: allacino@gmail.com
+password:
+
+.. line-block::
+	MAIL_MAILER=smtp
+	MAIL_HOST=smtp.mailtrap.io
+	MAIL_PORT=2525
+	MAIL_USERNAME=68fa6f3e3194c0
+	MAIL_PASSWORD=448c2b8dbfeddf
+	MAIL_ENCRYPTION=tls
 
