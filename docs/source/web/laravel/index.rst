@@ -4,5 +4,5 @@ Laravel
 .. toctree::
    :maxdepth: 1
 
-	mail
-	vue
+	mail.rst
+	vue.rst
