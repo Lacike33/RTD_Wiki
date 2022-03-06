@@ -4,7 +4,7 @@ Laravel
 tu by mal byt toctree ...
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :name: laravel
 
    mail

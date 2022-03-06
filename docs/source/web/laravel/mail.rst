@@ -23,3 +23,14 @@ Pre sťahovanie dependencies slúži `Composer <https://getcomposer.org/>`_ a v�
 Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_ určený pre **Laravel** projekty a teší sa aj veľkému počtu fanúšikov vlastných videotutoriálov `Laracast <https://laracasts.com/>`_ ako aj `Scotch.io <https://scotch.io/tag/laravel>`_ tutoriálov.
 
 **Konkrétne riešenia :**
+
+.. code-block:: env
+   MAIL_DRIVER=smtp
+   MAIL_HOST=smtp.forpsi.com
+   MAIL_PORT=587
+   MAIL_USERNAME=postmaster@lvconsult.sk
+   MAIL_PASSWORD=vBUP827_xM
+   MAIL_ENCRYPTION=null
+   MAIL_FROM_ADDRESS=postmaster@lvconsult.sk
+   MAIL_FROM_NAME="LV consult s.r.o."
+   MAIL_ENCRYPTION=tls
