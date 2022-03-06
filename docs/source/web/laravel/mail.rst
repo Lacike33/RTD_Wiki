@@ -54,17 +54,15 @@ Mailablle class
 
 Pomocnu triedu (Mailablle class) na odosielanie mailov je mozne vytvorit nasledujucimi prikazmy:
 
-.. code-block:: console
+.. line-block::
    php artisan make:mail <Nazov_triedy>                                      // s pouzitim Blade view
    php artisan make:mail <Nazov_triedy> --markdown=<Cesta_k_suboru>          // s pouzitim sablony Markdown
    php artisan vendor:publish --tag=laravel-mail                             // export markdown komponent do vlastnej struktury
 
 V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit parametre ako :
 
+.. line-block::
 -> from
-
 -> subject
-
 -> view
-
 -> attach
