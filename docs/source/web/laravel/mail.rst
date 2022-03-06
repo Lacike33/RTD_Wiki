@@ -24,7 +24,7 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_
 
 **Konkrétne riešenia :**
 
-.. code-block::
+.. note::
    MAIL_DRIVER=smtp
    MAIL_HOST=smtp.forpsi.com
    MAIL_PORT=587
