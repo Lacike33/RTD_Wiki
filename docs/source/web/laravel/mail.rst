@@ -24,7 +24,7 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_
 
 **Konkrétne riešenia :**
 
-.. code-block:: ini
+```
    MAIL_DRIVER=smtp
    MAIL_HOST=smtp.forpsi.com
    MAIL_PORT=587
@@ -34,3 +34,4 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_
    MAIL_FROM_ADDRESS=postmaster@lvconsult.sk
    MAIL_FROM_NAME="LV consult s.r.o."
    MAIL_ENCRYPTION=tls
+```
