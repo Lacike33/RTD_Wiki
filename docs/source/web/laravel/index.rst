@@ -13,8 +13,8 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>` 
    :maxdepth: 1
    :name: laravel
 
-	mail
-	vue
+	web/laravel/mail
+	web/laravel/vue
 
 * [Admin-LTE](AdminLte)
 * [Ajax](Ajax)
