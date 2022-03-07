@@ -58,3 +58,34 @@ Ak chcete pridať tlačidlo, ktoré odkazuje na úložisko vašej dokumentácie,
 		"repository_url": "https://github.com/{your-docs-url}",
 		"use_repository_button": True,
 	}
+
+Bočný panel
+-----------
+
+Existuje niekoľko hlavných oblastí stránky, ktoré si môžete prispôsobiť podľa témy knihy.
+Najbežnejší je primárny bočný panel (štandardne na ľavej strane stránky).
+
+Prvky bočného panela sú definované ako šablóny HTML podľa Sphinx, rozšírení Sphinx a aktuálnej témy.
+Pomocou konfigurácie ``html_sidebars`` môžete určiť, ktoré stránky by mali obsahovať prvky bočného panela.
+Tento krok v tomto návode preskočíme, ale detaili su popisane v `Control the left sidebar items <https://sphinx-book-theme.readthedocs.io/en/stable/customize/sidebar-primary.html#sidebar-primary-items>`_ .
+
+**Prispôsobme si logo našej stránky**
+
+Za týmto účelom upravíme možnosti konfigurácie ``html_logo`` a ``html_title``.
+
+Ak chcete pridať logo lokality, postupujte takto:
+
+1. Vložte obrázok do koreňového adresára dokumentácie (napr. myimage.png).
+1. Pridajte do súboru ``conf.py`` riadok, ktorý vyzerá takto:
+
+.. code:: python
+
+   html_logo = "path/to/myimage.png"
+
+Ďalej prispôsobíme názov stránky.
+
+Ak to chcete urobiť, pridajte do súboru ``conf.py`` riadok, ktorý vyzerá takto:
+
+.. code:: python
+
+   html_logo = "html_title = "My site title""
