@@ -9,23 +9,22 @@ Viac na webe Laravelu `Mail <https://laravel.com/docs/9.x/mail>`_.
 
 Konfiguracia
 ------------
-.. configuration-block::
 
-    .. code-block:: yaml
+.. code-block:: yaml
 
-        # Configuration in YAML
+	# Configuration in YAML
 
-    .. code-block:: xml
+.. code-block:: xml
 
-        <!-- Configuration in XML -->
+	<!-- Configuration in XML -->
 
-    .. code-block:: php
+.. code-block:: php
 
-        // Configuration in PHP
+	// Configuration in PHP
 
-	.. code-block:: html+php
+.. code-block:: html+php
 
-		<! Test pre HTML !>
+	<! Test pre HTML !>
 
 .. code-block:: console
 
