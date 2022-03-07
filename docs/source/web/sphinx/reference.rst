@@ -44,7 +44,9 @@ Na podporu krížových odkazov na ľubovoľné miesta v akomkoľvek dokumente s
 
 Existujú dva spôsoby, ako môžete odkazovať na štítky:
 
-1. Ak štítok umiestnite priamo pred názov sekcie, môžete naň odkazovať pomocou ``:ref:`názov-názvu```.
+1. Odkaz na sekciu so stitkom
+
+Ak štítok umiestnite priamo pred názov sekcie, môžete naň odkazovať pomocou ``:ref:`názov-názvu```.
 
 Napríklad:
 
@@ -63,7 +65,9 @@ Rola ``:ref:`` potom vygeneruje odkaz na sekciu s názvom odkazu „Sekcia na kr
 
 Funguje to rovnako dobre, keď sú sekcia a odkaz v rôznych zdrojových súboroch.
 
-2. Na štítky, ktoré nie sú umiestnené pred názvom sekcie, možno stále odkazovať, ale odkazu musíte prideliť explicitný názov pomocou tejto syntaxe: ``:ref:`Názov odkazu <názov-názvu>```.
+2. Odkaz na nazov sekcie bez stitku
+
+Na štítky, ktoré nie sú umiestnené pred názvom sekcie, možno stále odkazovať, ale odkazu musíte prideliť explicitný názov pomocou tejto syntaxe: ``:ref:`Názov odkazu <názov-názvu>```.
 
 Použitie **ref** sa odporúča pred štandardnými odkazmi reStructuredText na sekcie (ako je ```Názov sekcie`_``), pretože funguje naprieč súbormi.
 Keď sa zmenia nadpisy sekcií, zobrazí sa varovanie ak sú nesprávne.
