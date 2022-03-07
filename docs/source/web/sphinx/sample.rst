@@ -1,0 +1,63 @@
+.. _doc_sphinx_sample:
+
+
+Sample
+======
+
+V tejte sekcii su zozbriene veskere ukazky pouzitia.
+
+Code block
+----------
+
+**YAML**
+
+.. code-block:: yaml
+
+	# Configuration in YAML
+
+**XML**
+
+.. code-block:: xml
+
+	<!-- Configuration in XML -->
+
+**PHP**
+
+.. code-block:: php
+
+	// Configuration in PHP
+
+**HTML+PHP**
+
+.. code-block:: html+php
+
+	<! Test pre HTML !>
+
+**CONSOLE**
+
+.. code-block:: console
+
+    $ pip install lumache
+
+**BASH**
+
+.. code-block:: bash
+
+   # common.sh
+   pip install my-dependency==1.2.3
+
+**PYTHON**
+
+.. code-block:: python
+
+    from celery.contrib import rdb; rdb.set_trace()
+
+**INI**
+
+.. code-block:: ini
+
+   # Configuration for nova-rootwrap
+   # This file should be owned by (and only-writeable by) the root user
+
+   [DEFAULT]
+   # List of directories to load filter definitions from (separated by ',').

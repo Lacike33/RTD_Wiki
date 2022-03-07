@@ -10,43 +10,6 @@ Viac na webe Laravelu `Mail <https://laravel.com/docs/9.x/mail>`_.
 Konfiguracia
 ------------
 
-.. code-block:: yaml
-
-	# Configuration in YAML
-
-.. code-block:: xml
-
-	<!-- Configuration in XML -->
-
-.. code-block:: php
-
-	// Configuration in PHP
-
-.. code-block:: html+php
-
-	<! Test pre HTML !>
-
-.. code-block:: console
-
-    $ pip install lumache
-
-.. code-block:: bash
-
-   # common.sh
-   pip install my-dependency==1.2.3
-
-.. code-block:: python
-
-    from celery.contrib import rdb; rdb.set_trace()
-
-.. code-block:: ini
-
-   # Configuration for nova-rootwrap
-   # This file should be owned by (and only-writeable by) the root user
-
-   [DEFAULT]
-   # List of directories to load filter definitions from (separated by ',').
-
 Na odosielanie mailov je potrebne nakonfigurovat v subore ``.env`` potrebne atributy ktore je mozne nastavit aj na FAKE server.
 
 **Korektne nastavenie :**
@@ -59,7 +22,7 @@ Pre sťahovanie dependencies slúži `Composer <https://getcomposer.org/>`_ a v�
 
 Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_ určený pre **Laravel** projekty a teší sa aj veľkému počtu fanúšikov vlastných videotutoriálov `Laracast <https://laracasts.com/>`_ ako aj `Scotch.io <https://scotch.io/tag/laravel>`_ tutoriálov.
 
-**Konkrétne riešenia :**
+**Konkrétna konfiguracia**
 
 .. code-block:: ini
 
@@ -79,10 +42,14 @@ Fake nastavenie
 Email bude chodit namiesto priamo userovi do schranky na **FAKE** server.
 Pre zobrazenie mailov ako aj konfiguracnych udajov pouzi login na `mailtrap.io <https://mailtrap.io/signin>`_ :
 
-user: allacino@gmail.com
-password:
+.. code-block:: ini
 
-.. line-block::
+	user: allacino@gmail.com
+	password:
+
+
+.. code-block:: ini
+
 	MAIL_MAILER=smtp
 	MAIL_HOST=smtp.mailtrap.io
 	MAIL_PORT=2525
@@ -95,10 +62,11 @@ Mailablle class
 
 Pomocnu triedu (Mailablle class) na odosielanie mailov je mozne vytvorit nasledujucimi prikazmy:
 
-.. line-block::
-   php artisan make:mail <Nazov_triedy>                                      // s pouzitim Blade view
-   php artisan make:mail <Nazov_triedy> --markdown=<Cesta_k_suboru>          // s pouzitim sablony Markdown
-   php artisan vendor:publish --tag=laravel-mail                             // export markdown komponent do vlastnej struktury
+.. code-block:: console
+
+   $ php artisan make:mail <Nazov_triedy>                                      // s pouzitim Blade view
+   $ php artisan make:mail <Nazov_triedy> --markdown=<Cesta_k_suboru>          // s pouzitim sablony Markdown
+   $ php artisan vendor:publish --tag=laravel-mail                             // export markdown komponent do vlastnej struktury
 
 V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit parametre ako :
 
