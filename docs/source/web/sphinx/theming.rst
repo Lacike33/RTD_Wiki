@@ -36,8 +36,8 @@ Ak chcete napríklad umiestniť bočný panel na pravú stranu a čierne pozadie
 .. code-block:: python
 
 	html_theme_options = {
-    "rightsidebar": "true",
-    "relbarbgcolor": "black"
+    	"rightsidebar": "true",
+    	"relbarbgcolor": "black"
 	}
 
 Oblubene témy
