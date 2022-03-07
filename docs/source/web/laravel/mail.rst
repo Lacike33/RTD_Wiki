@@ -30,10 +30,6 @@ Konfiguracia
 
     $ pip install lumache
 
-.. prompt:: bash
-
-    nc 127.0.0.1 6900
-
 .. code-block:: bash
 
    # common.sh
