@@ -65,7 +65,7 @@ Funguje to rovnako dobre, keď sú sekcia a odkaz v rôznych zdrojových súboro
 
 2. Na štítky, ktoré nie sú umiestnené pred názvom sekcie, možno stále odkazovať, ale odkazu musíte prideliť explicitný názov pomocou tejto syntaxe: ``:ref:`Názov odkazu <názov-názvu>```.
 
-Použitie **ref** sa odporúča pred štandardnými odkazmi reStructuredText na sekcie (ako je `Názov sekcie`_), pretože funguje naprieč súbormi.
+Použitie **ref** sa odporúča pred štandardnými odkazmi reStructuredText na sekcie (ako je ```Názov sekcie`_``), pretože funguje naprieč súbormi.
 Keď sa zmenia nadpisy sekcií, zobrazí sa varovanie ak sú nesprávne.
 
 Link na externu url
