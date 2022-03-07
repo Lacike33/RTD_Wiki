@@ -4,10 +4,12 @@
 Sample
 ======
 
-V tejte sekcii su zozbriene veskere ukazky pouzitia.
+V tejte sekcii su zozbrazene veskere ukazky pouzitia.
 
 Code block
 ----------
+
+Ukazka blokov pomocou direktivy ``.. code-block:: **[language]**``.
 
 **YAML**
 
