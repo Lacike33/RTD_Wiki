@@ -97,7 +97,7 @@ Existuje niekoľko špeciálnych druhov obsahu, ktoré táto téma podporuje, pr
 
 Jeden druh obsahu je obsah na okraji. To vám umožní „vysunúť“ obsah na okraj stránky, na okraje.
 
-Pridajte na stránku nejaký obsah okrajov pridaním nasledujúcej smernice (napísanej pomocou :doc:`MyST Markdown <markdown>`).
+Pridajte na stránku nejaký obsah okrajov pridaním nasledujúcej smernice (napísanej pomocou :doc:`MyST Markdown <../markdown>`).
 
 .. code::
 
