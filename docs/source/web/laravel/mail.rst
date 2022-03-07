@@ -16,13 +16,8 @@ Na odosielanie mailov je potrebne nakonfigurovat v subore ``.env`` potrebne atri
 
 Email bude chodit cez zadany SMT server:
 
-Laravel je framework pre vývoj web aplikácii s kladeným dôrazom na elegantnú syntax a dokumentáciu, ktorá je dostupná na `Laravel dokumentácia <https://laravel.com/docs/9.x>`_.
 
-Pre sťahovanie dependencies slúži `Composer <https://getcomposer.org/>`_ a všetky dostupné balíčky resp. repozitár balíčkov je dostupný na `Packagist <https://packagist.org/>`_ alebo `GitHub <https://github.com/>`_.
-
-Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_ určený pre **Laravel** projekty a teší sa aj veľkému počtu fanúšikov vlastných videotutoriálov `Laracast <https://laracasts.com/>`_ ako aj `Scotch.io <https://scotch.io/tag/laravel>`_ tutoriálov.
-
-**Konkrétna konfiguracia**
+**Konfiguracia**
 
 .. code-block:: ini
 
@@ -44,9 +39,8 @@ Pre zobrazenie mailov ako aj konfiguracnych udajov pouzi login na `mailtrap.io <
 
 .. code-block:: ini
 
-	user: allacino@gmail.com
-	password:
-
+	user = allacino@gmail.com
+	password =
 
 .. code-block:: ini
 
@@ -70,39 +64,44 @@ Pomocnu triedu (Mailablle class) na odosielanie mailov je mozne vytvorit nasledu
 
 V kazdej vygenerovanej classe metoda **build** vytvara mail a je mozne pouzit parametre ako :
 
-.. line-block::
+.. code-block:: ini
+
    -> from
    -> subject
    -> view
    -> attach
 
-.. line-block::
+.. code-block:: php
+
    return $this->from('Meno_odosielatela','example@example.com')
-   >view('emails.orders.shipped');
+   				->view('emails.orders.shipped');
 
 V pripade ze nechceme **MAIL** formatovat tak posleme PLAIN text takto
 
-.. line-block::
+.. code-block:: ini
+
    ->text('emails.orders.shipped_plain');
 
 V pripade ze chceme do **MAIL** sablony posielat aj data , tak mame k dispozicii 2 moznosti :
 
-1. Via Public Properties
+1. Via **Public Properties**
 
 V konstruktore vytvorenej mailablle triedy musime zadefinovat model z ktoreho budeme citat data:
 
-.. line-block::
+.. code-block:: php
+
    public $order;
    public function __construct(Order $order)
    {
        $this->order = $order;
    }
 
-2. Via The with Method
+2. Via The **with** Method
 
 V takomto pripade mozeme do VIEW poslat aj pole s datami "**with**"
 
-.. line-block::
+.. code-block:: php
+
    public function build()
    {
        return $this->view('emails.orders.shipped')
@@ -115,7 +114,8 @@ V takomto pripade mozeme do VIEW poslat aj pole s datami "**with**"
 Odosielanie priloh
 ------------------
 
-.. line-block::
+.. code-block:: php
+
    public function build()
    {
        return $this->view('emails.orders.shipped')
@@ -124,7 +124,8 @@ Odosielanie priloh
 
 alebo
 
-.. line-block::
+.. code-block:: php
+
    public function build()
    {
        return $this->view('emails.orders.shipped')
@@ -137,7 +138,8 @@ alebo
 Odoslanie obrazku
 -----------------
 
-.. line-block::
+.. code-block:: html+php
+
    <body>
     Here is an image:
 
@@ -149,17 +151,20 @@ Markdown mail
 
 Zakladom je mat blade s pouzitim Markdown komponentami. Prikaz na vygenerovanie VIEW :
 
-.. line-block::
-   php artisan make:mail <Nazov_triedy> --markdown=<Cesta_k_suboru>          // s pouzitim sablony Markdown
+.. code-block:: console
+
+   $ php artisan make:mail <Nazov_triedy> --markdown=<Cesta_k_suboru>          // s pouzitim sablony Markdown
 
    napr.
 
-.. line-block::
-   php artisan make:mail OrderShipped --markdown=emails.orders.shipped
+.. code-block:: console
+
+   $ php artisan make:mail OrderShipped --markdown=emails.orders.shipped
 
 V pripade pouzitia Markdown sablony v metode **build** pouzijeme metodu **markdown** :
 
-.. line-block::
+.. code-block:: php
+
    return $this->from('example@example.com')
                 ->markdown('emails.orders.shipped');
 
@@ -168,27 +173,30 @@ Kustomizacia Markdown komponentov
 
 V prvom rade musime mat vyexportovane MARKDOWN komponenty do vlastnej struktury :
 
-.. line-block::
-   php artisan vendor:publish --tag=laravel-mail
+.. code-block:: console
 
-Po vygenerovani sa komponenty nachadzaju v ```resources/views/vendor/mail```
+   $ php artisan vendor:publish --tag=laravel-mail
+
+Po vygenerovani sa komponenty nachadzaju v ``resources/views/vendor/mail``
 
 Kustomizacia CSS Markdown komponentov
 *************************************
 
-Vygenerovane komponenty obsahuju defaultny css subor ```default.css``` pre kazdu temu  ```resources/views/vendor/mail/html/themes``` ktoreho upravou sa zmeny prejavia automaticky.
+Vygenerovane komponenty obsahuju defaultny css subor ``default.css`` pre kazdu temu  ``resources/views/vendor/mail/html/themes`` ktoreho upravou sa zmeny prejavia automaticky.
 
-V pripade ze si chceme vytvorit vlastnu themu, tak ju vytvorime tu ```resources/views/vendor/mail/html/themes``` ale nesmieme zabudnut na nastavenie temy v configu ```config\mail```
+V pripade ze si chceme vytvorit vlastnu themu, tak ju vytvorime tu ``resources/views/vendor/mail/html/themes`` ale nesmieme zabudnut na nastavenie temy v configu ``config\mail``
 
 Odoslanie mailu
 ---------------
 
-.. line-block::
+.. code-block:: php
+
 	Mail::to($request->user())->send(new OrderShipped($order));
 
 alebo
 
-.. line-block::
+.. code-block:: php
+
 	Mail::to($request->user())
 		->cc($moreUsers)
 		->bcc($evenMoreUsers)
@@ -196,7 +204,8 @@ alebo
 
 MAIL je mozne odoslat priamo do prehliadaca :
 
-.. line-block::
+.. code-block:: php
+
 	Route::get('/mailable', function () {
     	$invoice = App\Invoice::find(1);
 
@@ -205,7 +214,8 @@ MAIL je mozne odoslat priamo do prehliadaca :
 
 Dalsou moznostou je vyrenderovanie Mailu. Metoda **render** vráti vyhodnotený obsah Mailu ako reťazec
 
-.. line-block::
+.. code-block:: php
+
    $invoice = App\Invoice::find(1);
 
    return (new App\Mail\InvoicePaid($invoice))->render();
@@ -213,7 +223,8 @@ Dalsou moznostou je vyrenderovanie Mailu. Metoda **render** vráti vyhodnotený 
 Lokalizovanie jazyka mailu
 --------------------------
 
-.. line-block::
+.. code-block:: php
+
 	Mail::to($request->user())->send(
     (new OrderShipped($order))->locale('es')
 	);
@@ -225,7 +236,8 @@ Keďže odosielanie e-mailových správ môže drasticky predĺžiť čas odozvy
 Laravel to uľahčuje pomocou zabudovaného rozhrania API pre jednotnú frontu.
 Ak chcete na fronte e-mailovú správu, použite metódu frontu na priečke pošty po zadaní príjemcov správy:
 
-.. line-block::
+.. code-block:: console
+
    Mail::to($request->user())
 		->cc($moreUsers)
 		->bcc($evenMoreUsers)
