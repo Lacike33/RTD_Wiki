@@ -10,7 +10,7 @@ Viac na webe Laravelu `Mail <https://laravel.com/docs/9.x/mail>`_.
 Konfiguracia
 ------------
 
-Na odosielanie mailov je potrebne nakonfigurovat v subore ```.env``` potrebne atributy ktore je mozne nastavit aj na FAKE server.
+Na odosielanie mailov je potrebne nakonfigurovat v subore ``.env`` potrebne atributy ktore je mozne nastavit aj na FAKE server.
 
 **Korektne nastavenie :**
 
