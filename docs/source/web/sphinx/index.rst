@@ -19,5 +19,6 @@ Sphinx používa **reStructuredText** ako svoj značkovací jazyk a mnohé z jeh
    :maxdepth: 3
    :name: sphinx
 
-   sample
+   theming
    markdown
+   sample

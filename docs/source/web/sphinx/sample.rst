@@ -62,3 +62,16 @@ Ukazka blokov pomocou direktivy ``.. code-block:: **[language]**``.
 
    [DEFAULT]
    # List of directories to load filter definitions from (separated by ',').
+
+Zaroven je mozne aj pouzitie alternativnej direktivy ``.. code:: **[language]**``.
+
+.. code:: python
+
+    import sphinx_rtd_theme
+
+    extensions = [
+        ...
+        'sphinx_rtd_theme',
+    ]
+
+    html_theme = "sphinx_rtd_theme"
