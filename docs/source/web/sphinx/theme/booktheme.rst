@@ -14,4 +14,4 @@ Get started
 
 	Táto dokumentácia a nižšie uvedené príklady sú napísané pomocou **MyST Markdown**, čo je forma markdown, ktorá funguje so Sphinx.
 
-	Blizsie informacie su popisane na stranke :doc:`Markdown`
+	Blizsie informacie su popisane na stranke :doc:`markdown`
