@@ -16,3 +16,13 @@ Pre pouzitie markdownu vo vlastnom projekte postupujte nasledovne :
 .. code-block:: console
 
 	$ pip install --upgrade myst-parser
+
+1. Pridaj **MyST-Parser** do extension v konfiguracii projektu ``conf.py``
+
+.. code-block:: ini
+
+	extensions = ['myst_parser']
+
+.. note::
+
+	MyST-Parser vyzaduje Sphinx 2.1 alebo novsi.
