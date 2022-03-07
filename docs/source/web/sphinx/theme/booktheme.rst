@@ -76,7 +76,7 @@ Za týmto účelom upravíme možnosti konfigurácie ``html_logo`` a ``html_titl
 Ak chcete pridať logo lokality, postupujte takto:
 
 1. Vložte obrázok do koreňového adresára dokumentácie (napr. myimage.png).
-1. Pridajte do súboru ``conf.py`` riadok, ktorý vyzerá takto:
+2. Pridajte do súboru ``conf.py`` riadok, ktorý vyzerá takto:
 
 .. code:: python
 
@@ -89,3 +89,24 @@ Ak to chcete urobiť, pridajte do súboru ``conf.py`` riadok, ktorý vyzerá tak
 .. code:: python
 
    html_logo = "html_title = "My site title""
+
+Okraje stranky
+--------------
+
+Existuje niekoľko špeciálnych druhov obsahu, ktoré táto téma podporuje, prevažne inšpirovaných štýlmi tém Tufte CSS.
+
+Jeden druh obsahu je obsah na okraji. To vám umožní „vysunúť“ obsah na okraj stránky, na okraje.
+
+Pridajte na stránku nejaký obsah okrajov pridaním nasledujúcej smernice (napísanej pomocou :doc:`MyST Markdown <markdown>`).
+
+.. code::
+
+	{margin} Look, some margin content!
+	On wider screens, this content will pop out to the side!
+
+Na širokouhlých obrazovkách sa obsah okrajov vysunie na stranu stránky a umožní obsahu pod ním pohybovať sa nahor.
+
+To vám umožní poskytnúť ďalšie informácie bez prerušenia toku informácií.
+
+Existuje mnoho ďalších vecí, ktoré môžete robiť s témou knihy Sphinx.
+Teraz, keď ste začali, pozrite si ďalšie časti vľavo, kde sa dozviete viac o tom, ako ho používať.

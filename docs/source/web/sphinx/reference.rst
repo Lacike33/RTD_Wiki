@@ -21,6 +21,7 @@ Ak je odkaz ``:doc:`/people``` alebo ``:doc:`../people```, odkaz odkazuje na ľu
 Ak nie je uvedený žiadny explicitný text odkazu (ako zvyčajne: ``:doc:`Členovia Monty Python </people>```), titulok odkazu bude názvom daného dokumentu.
 
 .. _doc_sphinx_reference_section:
+
 Link na sekciu
 --------------
 

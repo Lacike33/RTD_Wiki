@@ -39,3 +39,12 @@ Pre pouzitie markdownu vo vlastnom projekte postupujte nasledovne :
 
 4. MyST-Parser môžete ďalej nakonfigurovať tak, aby umožňoval vlastnú syntax, ktorú štandardná CommonMark nepodporuje.
 Viac v dokumentácii `MyST-Parser <https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html>`_.
+
+Zbierka rozšírení Sphinx
+------------------------
+
+Nástroje v ekosystéme Sphinx na písanie krásnych online kníh a dokumentov:
+
+* `sphinx-copybutton <https://sphinx-copybutton.readthedocs.io/>`_
+* `sphinx-togglebutton <https://sphinx-togglebutton.readthedocs.io/>`_
+* `sphinx-panels <https://sphinx-panels.readthedocs.io/en/latest/>`_
