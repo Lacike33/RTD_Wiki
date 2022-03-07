@@ -124,7 +124,7 @@ Odosielanie priloh
 
 alebo
 
-.. code-block:: php
+.. code-block:: PHP
 
    public function build()
    {
@@ -155,7 +155,7 @@ Zakladom je mat blade s pouzitim Markdown komponentami. Prikaz na vygenerovanie 
 
    $ php artisan make:mail <Nazov_triedy> --markdown=<Cesta_k_suboru>          // s pouzitim sablony Markdown
 
-   napr.
+napr.
 
 .. code-block:: console
 
