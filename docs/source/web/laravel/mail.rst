@@ -9,6 +9,48 @@ Viac na webe Laravelu `Mail <https://laravel.com/docs/9.x/mail>`_.
 
 Konfiguracia
 ------------
+.. configuration-block::
+
+    .. code-block:: yaml
+
+        # Configuration in YAML
+
+    .. code-block:: xml
+
+        <!-- Configuration in XML -->
+
+    .. code-block:: php
+
+        // Configuration in PHP
+
+	.. code-block:: html+php
+
+		<! Test pre HTML !>
+
+.. code-block:: console
+
+    $ pip install lumache
+
+.. prompt:: bash
+
+    nc 127.0.0.1 6900
+
+.. code-block:: bash
+
+   # common.sh
+   pip install my-dependency==1.2.3
+
+.. code-block:: python
+
+    from celery.contrib import rdb; rdb.set_trace()
+
+.. code-block:: ini
+
+   # Configuration for nova-rootwrap
+   # This file should be owned by (and only-writeable by) the root user
+
+   [DEFAULT]
+   # List of directories to load filter definitions from (separated by ',').
 
 Na odosielanie mailov je potrebne nakonfigurovat v subore ``.env`` potrebne atributy ktore je mozne nastavit aj na FAKE server.
 
