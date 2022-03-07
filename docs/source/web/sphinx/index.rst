@@ -20,3 +20,4 @@ Sphinx používa **reStructuredText** ako svoj značkovací jazyk a mnohé z jeh
    :name: sphinx
 
    sample
+   markdown

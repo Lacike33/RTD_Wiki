@@ -1,6 +1,5 @@
 .. _doc_sphinx_sample:
 
-
 Sample
 ======
 
