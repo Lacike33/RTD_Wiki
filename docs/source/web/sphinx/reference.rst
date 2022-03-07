@@ -14,11 +14,11 @@ Link na dokument
 
 Odkaz na určený dokument ``:doc:``; názov dokumentu môže byť špecifikovaný v absolútnom alebo relatívnom zmysle.
 
-Napríklad, ak sa odkaz :doc:`parrot` vyskytuje v sketches/indexe dokumentu, potom odkaz odkazuje na sketches/parrot.
+Napríklad, ak sa odkaz ``:doc:`parrot``` vyskytuje v sketches/indexe dokumentu, potom odkaz odkazuje na sketches/parrot.
 
-Ak je odkaz :doc:`/people` alebo :doc:`../people`, odkaz odkazuje na ľudí.
+Ak je odkaz ``:doc:`/people``` alebo ``:doc:`../people```, odkaz odkazuje na ľudí.
 
-Ak nie je uvedený žiadny explicitný text odkazu (ako zvyčajne: :doc:`Členovia Monty Python </people>`), titulok odkazu bude názvom daného dokumentu.
+Ak nie je uvedený žiadny explicitný text odkazu (ako zvyčajne: ``:doc:`Členovia Monty Python </people>```), titulok odkazu bude názvom daného dokumentu.
 
 Link na sekciu
 --------------
@@ -30,6 +30,17 @@ Príklad:
 .. code::
 
 	See :ref:`this code snippet <this-py>` for an example.
+
+Na podporu krížových odkazov na ľubovoľné miesta v akomkoľvek dokumente sa používajú štandardné štítky ReST.
+
+.. note::
+
+	Názvy štítkov musia byť jedinečné v celej dokumentácii.
+
+	Referenčné štítky musia začínať podčiarkovníkom.
+	Pri odkazovaní na štítok je potrebné vynechať podčiarknutie (pozri príklady vyššie).
+
+Existujú dva spôsoby, ako môžete odkazovať na štítky:
 
 Link na externu url
 -------------------
