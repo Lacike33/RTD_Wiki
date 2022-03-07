@@ -20,6 +20,7 @@ Sphinx používa **reStructuredText** ako svoj značkovací jazyk a mnohé z jeh
    :name: sphinx
 
    directives
+   reference
    theming
    markdown
    sample
