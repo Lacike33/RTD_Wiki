@@ -66,6 +66,7 @@ A list of relative column widths. The default is equal-width columns (100%/#colu
 
 "auto" delegates the determination of column widths to the backend (LaTeX, the HTML browser, ...).
 * width - length or percentage
+
 List table
 ----------
 
