@@ -74,3 +74,11 @@ Keď sa zmenia nadpisy sekcií, zobrazí sa varovanie ak sú nesprávne.
 
 Link na externu url
 -------------------
+
+Explicit external targets are interpolated into references such as "Python_".
+
+.. _Python: http://www.python.org/
+
+For others, please see:
+
+http://docutils.sourceforge.net/docs/ref/rst/directives.html.
