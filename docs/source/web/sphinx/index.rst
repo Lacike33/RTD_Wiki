@@ -23,4 +23,5 @@ Sphinx používa **reStructuredText** ako svoj značkovací jazyk a mnohé z jeh
    reference
    theming
    markdown
+   laravel
    sample

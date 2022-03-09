@@ -110,3 +110,5 @@ To vám umožní poskytnúť ďalšie informácie bez prerušenia toku informác
 
 Existuje mnoho ďalších vecí, ktoré môžete robiť s témou knihy Sphinx.
 Teraz, keď ste začali, pozrite si ďalšie časti vľavo, kde sa dozviete viac o tom, ako ho používať.
+
+
