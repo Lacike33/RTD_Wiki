@@ -160,7 +160,7 @@ Admonitions
 Download Links
 ==============
 
-:download:` <img/intro.jpg>`
+:download:`JPG <img/intro.jpg>`
 
 
 Target
