@@ -75,3 +75,12 @@ Zaroven je mozne aj pouzitie alternativnej direktivy ``.. code:: **[language]**`
     ]
 
     html_theme = "sphinx_rtd_theme"
+
+GUI label
+---------
+
+.. code::
+
+	:guilabel:`Some action`
+
+:guilabel:`Some action`
