@@ -76,6 +76,19 @@ Zaroven je mozne aj pouzitie alternativnej direktivy ``.. code:: **[language]**`
 
     html_theme = "sphinx_rtd_theme"
 
+**Code block** s cislovanymi riadkami s podfarbenim a caption ...
+
+.. code-block:: python
+   :linenos:
+   :emphasize-lines: 3,5
+   :caption: Code Blocks can have captions.
+
+   def some_function():
+       interesting = False
+       print 'This line is highlighted.'
+       print 'This one is not...'
+       print '...but this one is.'
+
 GUI label
 ---------
 
