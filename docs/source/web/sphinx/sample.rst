@@ -96,4 +96,8 @@ GUI label
 
 	:guilabel:`Some action`
 
+Ina ukazka pre block ::
+
+	:guilabel:`Some action`
+
 :guilabel:`Some action`
