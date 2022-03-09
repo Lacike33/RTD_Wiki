@@ -102,7 +102,6 @@ Ina ukazka pre block ::
 
 :guilabel:`Some action`
 
-
 Centered text
 -------------
 
@@ -163,10 +162,9 @@ Download Links
 
 :download:` <img/intro.jpg>`
 
-:guilabel:`Some action`
 
 Target
-^^^^^^
+------
 
 Implicitny odkaz na nadpis bez stitka Glossary_
 
@@ -178,17 +176,16 @@ Literal Blocks
 
 Literal blocks are indicated with a double-colon ("::") at the end of
 the preceding paragraph (over there ``-->``).  They can be indented ::
-
     if literal_block:
         text = 'is left as-is'
         spaces_and_linebreaks = 'are preserved'
         markup_processing = None
 
 Or they can be quoted without indentation::
-
 >> Great idea!
 >
 > Why didn't I think of that?
+-->
 
 Sidebar
 -------
@@ -207,4 +204,3 @@ Glossary
 
   Reading
      The process of taking information into ones mind through the use of eyes.
-
