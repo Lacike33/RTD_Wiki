@@ -160,7 +160,7 @@ Admonitions
 Download Links
 ==============
 
-:download:`JPG <img/intro.jpg>`
+:download:`Stiahni JPG <img/intro.jpg>`
 
 
 Target

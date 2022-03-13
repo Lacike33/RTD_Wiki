@@ -11,5 +11,6 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_
    :maxdepth: 3
    :name: laravel
 
+   authentication
    mail
    vue
