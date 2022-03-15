@@ -14,11 +14,9 @@ Image
 
 .. code:: python
 
-	.. image:: picture.png
+	.. image:: img/intro.jpg
 
-Klikatelny image ::
+Klikatelny image :
 
-.. image:: static/yi_jing_01_chien.jpg
-   :target: directives_
-
-
+.. image:: img/intro.jpg
+   :target: Images_
