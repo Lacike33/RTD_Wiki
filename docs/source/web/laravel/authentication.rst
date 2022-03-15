@@ -15,9 +15,7 @@ Stacilo pouzit príkaz :
 
 .. note::
 
-	V pripade, ze chcete registraciu zakazat tak v subore ``routes/web.php`` pridajte ::
-
-		Auth::routes(['register' => false]);
+	V pripade, ze chcete registraciu zakazat tak v subore ``routes/web.php`` pridajte ``Auth::routes(['register' => false])``
 
 Od verzie **6.x** az po aktualnu verziu je mozne pouzit 2 implemnentacie tzv. '**Starter kit**<https://laravel.com/docs/9.x/starter-kits>'_ .
 
