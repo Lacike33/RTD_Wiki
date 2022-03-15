@@ -17,7 +17,7 @@ Stacilo pouzit príkaz :
 
 	V pripade, ze chcete registraciu zakazat tak v subore ``routes/web.php`` pridajte ``Auth::routes(['register' => false])``
 
-Od verzie **6.x** az po aktualnu verziu je mozne pouzit 2 implemnentacie tzv. `**Starter kit**<https://laravel.com/docs/9.x/starter-kits>`_ .
+Od verzie **6.x** az po aktualnu verziu je mozne pouzit 2 implemnentacie tzv. `Starter kit <https://laravel.com/docs/9.x/starter-kits>`_ .
 
 Laravel Breeze
 --------------
@@ -25,7 +25,9 @@ Laravel Breeze
 Laravel Breeze je minimálna, jednoduchá implementácia všetkých overovacích funkcií Laravel, vrátane prihlásenia, registrácie, resetovania hesla, overenia e-mailu a potvrdenia hesla.
 Predvolená vrstva zobrazenia Laravel Breeze sa skladá z jednoduchých šablón Blade v štýle Tailwind CSS.
 
-Najskor je nutne stiahnut package ::
+Najskor je nutne stiahnut package
+
+.. code:: console
 
 	composer require laravel/breeze --dev
 
