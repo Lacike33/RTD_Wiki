@@ -20,9 +20,10 @@ Sphinx používa **reStructuredText** ako svoj značkovací jazyk a mnohé z jeh
    :name: sphinx
 
    directives
-   reference
-   theming
-   markdown
+   images
    laravel
+   markdown
+   reference
    sample
+   theming
    tables
