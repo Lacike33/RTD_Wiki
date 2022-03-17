@@ -95,7 +95,7 @@ K danemu kodu je nutne vytvorit uz zmienenu VUE instanciu :
 Komponenty
 ----------
 
-.. code-block:: javascript
+.. code-block:: php
 
 	<?js
 
