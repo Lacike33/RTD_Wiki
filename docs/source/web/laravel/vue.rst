@@ -69,7 +69,7 @@ Zakladnym suborom v Laravel aplikacii je ``resources\js\app.js`` kde registrujem
 
 Je nutne zadeklarovat hlavny HTML pre VUE instanciu nasledovnym sposobom :
 
-..code-block:: html
+..code::
 
 	<div id="vue-app">
 		Hello Vue !
@@ -77,7 +77,7 @@ Je nutne zadeklarovat hlavny HTML pre VUE instanciu nasledovnym sposobom :
 
 K danemu kodu je nutne vytvorit uz zmienenu VUE instanciu :
 
-..code-block:: javascript
+..code-block::
 
 	<script type="text/javascript">
 		var app = new Vue({
@@ -88,7 +88,7 @@ K danemu kodu je nutne vytvorit uz zmienenu VUE instanciu :
 Komponenty
 ==========
 
-..code-block:: javascript
+..code-block::
 
 	<?js
 
