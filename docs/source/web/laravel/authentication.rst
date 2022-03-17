@@ -17,7 +17,22 @@ Stacilo pouzit príkaz :
 
 	V pripade, ze chcete registraciu zakazat tak v subore ``routes/web.php`` pridajte ``Auth::routes(['register' => false])``
 
-Od verzie **6.x** az po aktualnu verziu je mozne pouzit 2 implemnentacie tzv. `Starter kit <https://laravel.com/docs/9.x/starter-kits>`_ .
+Od verzie **6.x** az po **7.x** Laravel preveroval vo svojej dokumentacii `laravel/ui <https://laravel.com/docs/6.x/authentication#included-routing>`_
+
+Laravel ui
+----------
+
+Balík **laravel/ui** spoločnosti Laravel poskytuje rýchly spôsob, ako vytvoriť všetky trasy a zobrazenia, ktoré potrebujete na overenie, pomocou niekoľkých jednoduchých príkazov:
+
+.. code:: console
+
+	composer require laravel/ui --dev
+
+	php artisan ui vue --auth
+
+Detail pre implemnentaciu **Vue.js** do laravel projektu popisujem v sekcii :ref:`doc_laravel_vue`.
+
+Od verzie **8.x** az po aktualnu verziu je mozne pouzit 2 implemnentacie tzv. `Starter kit <https://laravel.com/docs/9.x/starter-kits>`_ .
 
 Laravel Breeze
 --------------
@@ -39,12 +54,12 @@ Nasledne spustit artisan prikazy:
 
 .. note::
 
-	Please execute the ``npm install && npm run dev`` command to build your assets.
+	Spusti prikaz ``npm install && npm run dev`` pre instalaciu **NPM** balickov.
+
+Po instalacii NPM balikov nasleduje este spustit migraciu DB
 
 .. code:: console
 
-	npm install
-	npm run dev
 	php artisan migrate
 
 Reaktivny scafolding
