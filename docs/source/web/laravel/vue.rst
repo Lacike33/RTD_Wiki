@@ -28,6 +28,7 @@ Pre implementaciu cisteho **Vue 2** bez dalsich medzi frameworkov je optimalne v
 Nasledne je nutne si vybrat reaktivny framework a v nasom pripade to je **Vue.js**
 
 ::
+
 	// Generate basic scaffolding...
 
 	php artisan ui bootstrap
@@ -172,6 +173,62 @@ Vytvorte nový súbor ``App.vue`` v priečinku ``resources/js`` s nasledujúcim 
 			<h1>Vue 3 App</h1>
 		</div>
 	</template>
+
+Teraz musíme prispôsobiť našu ``app.js`` v ``resources/js``, aby sme mohli využívať náš súbor vue:
+
+.. code-block::
+
+	import { createApp } from "vue";
+
+	import App from "./App.vue";
+
+	createApp(App).mount("#app");
+
+	require("./bootstrap");
+
+Najprv importujeme metódu **createApp()**, ktorá je pre vývojárov Vue nová. Pomocou toho môžeme vytvoriť novú inštanciu Vue.
+
+Potom importujeme náš súbor Vue a vytvoríme novú inštanciu Vue a pripojíme ju k prvku s ID „app“.
+
+Teraz vytvorte prvok, ktorý má toto id. Aby sme to dosiahli, môžeme odstrániť štandardné označenie nachádzajúce sa v našom súbore ``welcome.blade.php`` a nahradiť ho týmto:
+
+.. code-block:: html+php
+
+	<!DOCTYPE html>
+	<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<title>Laravel</title>
+
+			<!-- Fonts -->
+			<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+		</head>
+		<body>
+			<div id="app"></div>
+		</body>
+		<script src="{{ asset('js/app.js') }}"></script>
+	</html>
+
+
+Ako môžete vidieť, máme **div** s id *app*, ktorá bude nahradená našou aplikáciou Vue.
+
+Nižšie máme značku skriptu, ktorá odkazuje **na app.js**, ktorú nemáme v ``resources/js``, ale v našom priečinku ``public/js``. Tento súbor je konečným výsledkom procesu vytvárania nášho webového balíka.
+
+Predtým, ako to urobíme, musíme znova spustiť proces zostavovania, pretože sme v skutočnosti nespracovali súbory Vue, ktoré sme vytvorili.
+
+.. code-block:: console
+
+	npm run dev
+
+.. note::
+
+	Aby sme nemuseli spúšťať ``npm run dev`` zakaždým, keď vykonáme zmenu, môžeme spustiť ``npm run watch``, ktorý nám umožní spustiť proces zostavovania hneď po uložení zmien.
+
+
+
+
 
 .. toctree::
    :maxdepth: 3
