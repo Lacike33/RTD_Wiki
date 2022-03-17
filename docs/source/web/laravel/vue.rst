@@ -54,6 +54,7 @@ Layout pouzitie
 		<example-component></example-component>
 	@endsection
 
+
 ..warning::
 
 	Nasledujuci js prihod do stranky :
