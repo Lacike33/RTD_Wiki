@@ -46,7 +46,7 @@ Po uspesnej instalacii staci spustit :
 Layout pouzitie
 ===============
 
-..code-block:: php
+..code::
 
 	@extends('layouts.app')
 
