@@ -14,6 +14,7 @@ Sumár praktickej dokumentácie a packegov 3. strán nájdeš `TU <https://githu
 
 	web/laravel/index
 	web/sphinx/index
+	web/tailwind/index
 	web/vue/index
 
 .. toctree::

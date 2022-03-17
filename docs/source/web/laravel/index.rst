@@ -14,4 +14,5 @@ Laravel má aj vlastný adresár balíčkov `Packalyst <http://packalyst.com/>`_
    authentication
    mail
    sass
+   tailwind
    vue
