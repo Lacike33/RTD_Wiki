@@ -165,7 +165,7 @@ Vytvorime koreňovu komponentu, ktora bude obsahovať celú našu aplikáciu Vue
 
 Vytvorte nový súbor ``App.vue`` v priečinku ``resources/js`` s nasledujúcim označením:
 
-..code-block:: html
+..code-block:: html+php
 
 	<template>
 		<div>
