@@ -9,14 +9,21 @@ Vue.js
 
 Stavia na štandarde HTML, CSS a JavaScript a poskytuje deklaratívny a komponentný programovací model, ktorý vám pomáha efektívne rozvíjať používateľské rozhrania, či už jednoduché alebo zložité.
 
-Implementacia
-=============
+VUE 2
+=====
 
-Pre implementaciu cisteho Vue bez dalsich medzi frameworkov je optimalne vykonat starsim sposobom a to nasledovne :
+Implementacia
+-------------
+
+Pre implementaciu cisteho **Vue 2** bez dalsich medzi frameworkov je optimalne vykonat starsim sposobom a to nasledovnym balickom :
 
 .. code:: console
 
 	composer require laravel/ui
+
+..warning::
+
+	POZOR!!! Plati pre verziu 6.x a vyssiu pre VUE 2 .
 
 Nasledne je nutne si vybrat reaktivny framework a v nasom pripade to je **Vue.js**
 
@@ -44,7 +51,7 @@ Po uspesnej instalacii staci spustit :
 	npm install && npm run dev
 
 Layout pouzitie
-===============
+---------------
 
 ..code::
 
@@ -63,7 +70,7 @@ Layout pouzitie
 			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 Struktura projektu
-==================
+------------------
 
 Zakladnym suborom v Laravel aplikacii je ``resources\js\app.js`` kde registrujeme VUE komponenty ako aj identifikujem zakladnu ROOT kostru vue priestoru.
 
@@ -86,7 +93,7 @@ K danemu kodu je nutne vytvorit uz zmienenu VUE instanciu :
 	</script>
 
 Komponenty
-==========
+----------
 
 ..code-block::
 
@@ -110,6 +117,45 @@ Komponenty
 		}
 	});
 	</script>
+
+VUE 3
+=====
+
+Instalacia
+----------
+
+a nakonfigurujte Vue 3
+
+Ak používate Laravel od 6.x vyššie, možno ste natrafili na balík Laravel/ui, pomocou ktorého by sme mohli nainštalovať Bootstrap, ako aj React alebo Vue.
+
+Pre **Vue 3** neexistuje žiadny balík, ale existuje pomerne jednoduchý spôsob, ako to urobiť.
+
+Najprv nainštalujte závislosti potrebné pre Vue 3:
+
+::
+
+	npm install --save vue@next && npm install --save-dev vue-loader@next
+
+Potom musíme povedať webpacku, aby skompiloval aj naše súbory vue.
+
+Môžeme to urobiť otvorením súboru ``webpack.mix.js`` a pridaním nasledujúceho riadku ::
+
+	const mix = require("laravel-mix");
+
+	mix.js("resources/js/app.js", "public/js")
+		.vue() //new
+		.postCss("resources/css/app.css", "public/css", [
+			//
+	]);
+
+Nasledne spustím inštaláciu npm :, po ktorej nasleduje npm run dev.
+
+..code:: console
+
+	npm install && npm run dev.
+
+
+Po vykonani vsetkych predchadzajucich krokoch mam laravel projekt pripraveny s VUE 3 frameworkom.
 
 .. toctree::
    :maxdepth: 3
