@@ -124,11 +124,9 @@ VUE 3
 Instalacia
 ----------
 
-a nakonfigurujte Vue 3
+Ak používate Laravel od **6.x** vyššie, možno ste natrafili na balík **Laravel/ui**, pomocou ktorého by sme mohli nainštalovať Bootstrap, ako aj React alebo Vue.
 
-Ak používate Laravel od 6.x vyššie, možno ste natrafili na balík Laravel/ui, pomocou ktorého by sme mohli nainštalovať Bootstrap, ako aj React alebo Vue.
-
-Pre **Vue 3** neexistuje žiadny balík, ale existuje pomerne jednoduchý spôsob, ako to urobiť.
+Pre aktualnu verziu Laravel **9.x** neexistuje žiadny balík pre instalaciu **Vue 3**, ale existuje pomerne jednoduchý spôsob, ako to urobiť.
 
 Najprv nainštalujte závislosti potrebné pre Vue 3:
 
@@ -136,7 +134,10 @@ Najprv nainštalujte závislosti potrebné pre Vue 3:
 
 	npm install --save vue@next && npm install --save-dev vue-loader@next
 
-Potom musíme povedať webpacku, aby skompiloval aj naše súbory vue.
+Konfigurcia
+-----------
+
+Po instalacii musíme povedať **webpacku**, aby skompiloval aj naše súbory vue.
 
 Môžeme to urobiť otvorením súboru ``webpack.mix.js`` a pridaním nasledujúceho riadku ::
 
@@ -150,12 +151,27 @@ Môžeme to urobiť otvorením súboru ``webpack.mix.js`` a pridaním nasledujú
 
 Nasledne spustím inštaláciu npm :, po ktorej nasleduje npm run dev.
 
-..code:: console
+..code-block:: console
 
 	npm install && npm run dev.
 
 
 Po vykonani vsetkych predchadzajucich krokoch mam laravel projekt pripraveny s VUE 3 frameworkom.
+
+Projekt
+-------
+
+Vytvorime koreňovu komponentu, ktora bude obsahovať celú našu aplikáciu Vue.
+
+Vytvorte nový súbor ``App.vue`` v priečinku ``resources/js`` s nasledujúcim označením:
+
+..code-block:: html
+
+	<template>
+		<div>
+			<h1>Vue 3 App</h1>
+		</div>
+	</template>
 
 .. toctree::
    :maxdepth: 3
