@@ -119,6 +119,8 @@ Komponenty
 	});
 	</script>
 
+.. _doc_laravel_vue3:
+
 VUE 3
 =====
 
@@ -131,7 +133,7 @@ Pre aktualnu verziu Laravel **9.x** neexistuje žiadny balík pre instalaciu **V
 
 Najprv nainštalujte závislosti potrebné pre Vue 3:
 
-::
+.. code-block:: console
 
 	npm install --save vue@next && npm install --save-dev vue-loader@next
 
@@ -162,7 +164,7 @@ Po vykonani vsetkych predchadzajucich krokoch mam laravel projekt pripraveny s V
 Projekt
 -------
 
-Vytvorime koreňovu komponentu, ktora bude obsahovať celú našu aplikáciu Vue.
+Vytvorime koreňovu komponentu, ktora bude obsahovať celú našu aplikáciu **Vue**.
 
 Vytvorte nový súbor ``App.vue`` v priečinku ``resources/js`` s nasledujúcim označením:
 
@@ -211,7 +213,6 @@ Teraz vytvorte prvok, ktorý má toto id. Aby sme to dosiahli, môžeme odstrán
 		<script src="{{ asset('js/app.js') }}"></script>
 	</html>
 
-
 Ako môžete vidieť, máme **div** s id *app*, ktorá bude nahradená našou aplikáciou Vue.
 
 Nižšie máme značku skriptu, ktorá odkazuje **na app.js**, ktorú nemáme v ``resources/js``, ale v našom priečinku ``public/js``. Tento súbor je konečným výsledkom procesu vytvárania nášho webového balíka.
@@ -225,10 +226,6 @@ Predtým, ako to urobíme, musíme znova spustiť proces zostavovania, pretože 
 .. note::
 
 	Aby sme nemuseli spúšťať ``npm run dev`` zakaždým, keď vykonáme zmenu, môžeme spustiť ``npm run watch``, ktorý nám umožní spustiť proces zostavovania hneď po uložení zmien.
-
-
-
-
 
 .. toctree::
    :maxdepth: 3
