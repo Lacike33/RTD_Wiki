@@ -1,10 +1,11 @@
 .. _doc_laravel_tailwind:
 
+************
 Tailwind css
-============
+************
 
 Instalacia TailwindCSS
-=====================================
+======================
 
 **TailwindCSS** sa stal veľmi populárnym nielen u vývojárov **Laravel**, ale aj vývojárov **Vue**.
 
