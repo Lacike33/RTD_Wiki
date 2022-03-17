@@ -31,6 +31,7 @@ Vseobecny postup instalacie NPM Packages
 -- globalnu registraciu robime v zakladnom subore ``resources/assets/js/app.js``
 
 ::
+
    // import nainstalovaneho pluginu
 
    import VueFormWizard from 'vue-form-wizard'
@@ -44,6 +45,7 @@ Vseobecny postup instalacie NPM Packages
 -- robime priamo v inej komponente
 
 ::
+
    import {FormWizard, TabContent} from 'vue-form-wizard'
    import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 
@@ -75,6 +77,7 @@ VUE dirctives
 	@submit - potvrdenie formulara a odoslanie dat
 
 ..note::
+
 	Pre zrusenie defaultne funkcionality pri odoslani formulara je potrebne pouzi ``@submit.prevent``
 
 .. toctree::
