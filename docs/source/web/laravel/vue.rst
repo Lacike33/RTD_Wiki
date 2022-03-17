@@ -10,7 +10,7 @@ Vue.js
 Stavia na štandarde HTML, CSS a JavaScript a poskytuje deklaratívny a komponentný programovací model, ktorý vám pomáha efektívne rozvíjať používateľské rozhrania, či už jednoduché alebo zložité.
 
 Implementacia
--------------
+=============
 
 Pre implementaciu cisteho Vue bez dalsich medzi frameworkov je optimalne vykonat starsim sposobom a to nasledovne :
 
@@ -44,7 +44,7 @@ Po uspesnej instalacii staci spustit :
 	npm install && npm run dev
 
 Layout pouzitie
----------------
+===============
 
 ..code-block:: php
 
@@ -62,7 +62,7 @@ Layout pouzitie
 			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 Struktura projektu
-------------------
+==================
 
 Zakladnym suborom v Laravel aplikacii je ``resources\js\app.js`` kde registrujeme VUE komponenty ako aj identifikujem zakladnu ROOT kostru vue priestoru.
 
@@ -85,7 +85,7 @@ K danemu kodu je nutne vytvorit uz zmienenu VUE instanciu :
 	</script>
 
 Komponenty
-----------
+==========
 
 ..code-block:: javascript
 

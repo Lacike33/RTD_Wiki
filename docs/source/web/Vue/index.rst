@@ -14,7 +14,7 @@ Stavia na štandarde HTML, CSS a JavaScript a poskytuje deklaratívny a komponen
 
 
 Vseobecny postup instalacie NPM Packages
-----------------------------------------
+========================================
 
 1. Nainstaluj komponentu cez NPM
 
@@ -54,17 +54,17 @@ Vseobecny postup instalacie NPM Packages
    }
 
 Existujuce VUE form komponenty
-------------------------------
+==============================
 
 ** Multisteps formulare**
 
-* [**vue-form-wizard**](https://www.npmjs.com/package/vue-form-wizard)
-* [**vue-good-wizard**](https://www.npmjs.com/package/vue-good-wizard)
+* `vue-form-wizard <https://www.npmjs.com/package/vue-form-wizard>`_
+* `vue-good-wizard <https://www.npmjs.com/package/vue-good-wizard>`_
 
 ** Flash spravy**
 
-* [**vue-flash-message**](https://www.npmjs.com/package/vue-flash-message)
-* [**Vuex Flash**](https://www.npmjs.com/package/vuex-flash)
+* `vue-flash-message <https://www.npmjs.com/package/vue-flash-message>`_
+* `Vuex Flash <https://www.npmjs.com/package/vuex-flash>`_
 
 Mnou vytvorene komponenty
 
