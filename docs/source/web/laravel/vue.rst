@@ -21,7 +21,7 @@ Pre implementaciu cisteho **Vue 2** bez dalsich medzi frameworkov je optimalne v
 
 	composer require laravel/ui
 
-..warning::
+.. warning::
 
 	POZOR!!! Plati pre verziu 6.x a vyssiu pre VUE 2 .
 
@@ -46,14 +46,14 @@ Po nainstalovaniu VUE dependencies je mozne vygenerovat login registration :
 
 Po uspesnej instalacii staci spustit :
 
-..code-block:: console
+.. code-block:: console
 
 	npm install && npm run dev
 
 Layout pouzitie
 ---------------
 
-..code::
+.. code:: php
 
 	@extends('layouts.app')
 
@@ -62,7 +62,7 @@ Layout pouzitie
 	@endsection
 
 
-..warning::
+.. warning::
 
 	Nasledujuci js prihod do stranky :
 		::
@@ -76,7 +76,7 @@ Zakladnym suborom v Laravel aplikacii je ``resources\js\app.js`` kde registrujem
 
 Je nutne zadeklarovat hlavny HTML pre VUE instanciu nasledovnym sposobom :
 
-..code::
+.. code:: html
 
 	<div id="vue-app">
 		Hello Vue !
@@ -84,7 +84,7 @@ Je nutne zadeklarovat hlavny HTML pre VUE instanciu nasledovnym sposobom :
 
 K danemu kodu je nutne vytvorit uz zmienenu VUE instanciu :
 
-..code-block::
+.. code-block::
 
 	<script type="text/javascript">
 		var app = new Vue({
@@ -95,7 +95,7 @@ K danemu kodu je nutne vytvorit uz zmienenu VUE instanciu :
 Komponenty
 ----------
 
-..code-block::
+.. code-block:: javascript
 
 	<?js
 
@@ -151,7 +151,7 @@ Môžeme to urobiť otvorením súboru ``webpack.mix.js`` a pridaním nasledujú
 
 Nasledne spustím inštaláciu npm :, po ktorej nasleduje npm run dev.
 
-..code-block:: console
+.. code-block:: console
 
 	npm install && npm run dev.
 
