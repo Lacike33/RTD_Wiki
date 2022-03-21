@@ -180,17 +180,36 @@ Teraz musíme prispôsobiť našu ``app.js`` v ``resources/js``, aby sme mohli v
 
 .. code-block::
 
+	require("./bootstrap");
+
 	import { createApp } from "vue";
 
 	import App from "./App.vue";
 
 	createApp(App).mount("#app");
 
-	require("./bootstrap");
 
 Najprv importujeme metódu **createApp()**, ktorá je pre vývojárov Vue nová. Pomocou toho môžeme vytvoriť novú inštanciu Vue.
 
 Potom importujeme náš súbor Vue a vytvoríme novú inštanciu Vue a pripojíme ju k prvku s ID „app“.
+
+Taktiez ale mozeme  konstantnu premennu ktoru podobne pripojime k prvku s ID ako v predchadzajucom pripade
+
+.. code-block::
+
+	import { createApp } from "vue";
+
+	import Home from "./components/Home.vue";
+	import Dashboard from "./components/Dashboard.vue";
+
+	const app = createApp({
+	  components: {
+		Home,
+		Dashboard
+	  }
+	});
+
+	app.mount("#app");
 
 Teraz vytvorte prvok, ktorý má toto id. Aby sme to dosiahli, môžeme odstrániť štandardné označenie nachádzajúce sa v našom súbore ``welcome.blade.php`` a nahradiť ho týmto:
 
@@ -226,6 +245,35 @@ Predtým, ako to urobíme, musíme znova spustiť proces zostavovania, pretože 
 .. note::
 
 	Aby sme nemuseli spúšťať ``npm run dev`` zakaždým, keď vykonáme zmenu, môžeme spustiť ``npm run watch``, ktorý nám umožní spustiť proces zostavovania hneď po uložení zmien.
+
+Vue router
+==========
+
+.. code-block:: CONSOLE
+
+	npm install vue-router@4
+
+Po instalacii samotneho **Vue Router** je potrebne nakonfigurovat zakladnu kostru obdobne ako pri zavedeni **VUE** a to v subore
+``app.js`` alebo ``main.js`` pripadne podla vlastneho uvazenia.
+
+.. code-block:: javascript
+
+	require("./bootstrap");
+
+	import { createApp } from "vue";
+	import Home from "./components/Home.vue";
+	import Dashboard from "./components/Dashboard.vue";
+
+	const app = createApp({
+	  components: {
+		Home,
+		Dashboard
+	  }
+	});
+
+	app.mount("#app");
+
+
 
 .. toctree::
    :maxdepth: 3
