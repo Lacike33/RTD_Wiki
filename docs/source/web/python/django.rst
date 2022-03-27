@@ -299,7 +299,7 @@ Databáza
 --------
 
 Ako databáze budeme používať **SQLite**, ktorá je v Django už prednastavené a nemusí sa na rozdiel od iných databáz inštalovať ani konfigurovať.
-Ak by ste v budúcnosti vytvárali komplexnejšie aplikácie, je vhodnejšie použiť napr. databázu `MySQL<https://www.itnetwork.sk/mysql>`_.
+Ak by ste v budúcnosti vytvárali komplexnejšie aplikácie, je vhodnejšie použiť napr. databázu MySQL https://www.itnetwork.sk/mysql .
 
 Modely
 ^^^^^^
