@@ -26,7 +26,7 @@ Adresárová štruktúra Django projektu
 
 Obsah zložky vyzerá nasledovne:
 
-..code-block:: console
+.. code-block:: console
 
 	mysite/
 		mysite/
@@ -680,7 +680,9 @@ Vytvorte súbor správ:
 
 * Z hlavnej ponuky vyberte Tools | Spustite úlohu manage.py (⌥ R) .
 * V okne úlohy manage.py zadajte
+
 .. code-block::
+
 	makemessages --locale <názov prostredia>
 
 Tento krok zopakujte pre každé miestne nastavenie, ktoré chcete vytvoriť.
