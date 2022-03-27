@@ -273,6 +273,8 @@ Po instalacii samotneho **Vue Router** je potrebne nakonfigurovat zakladnu kostr
 
 	app.mount("#app");
 
+Pri tvorbe SPA aplikacie, je vhodne pri pouziti vsetky ``<a>`` elemetoch pouzit ``<router-link>``.
+Vtedy pri preklikoch sa nerefreshuju stranky.
 
 
 .. toctree::

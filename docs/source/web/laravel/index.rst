@@ -66,6 +66,7 @@ Namiesto použitia príznaku ``--git`` môžete tiež použiť príznak ``--gith
    :maxdepth: 3
    :name: laravel
 
+   api
    authentication
    mail
    sass

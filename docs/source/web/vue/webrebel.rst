@@ -152,3 +152,62 @@ Nasledne u podobne ako pri komunikaii s rodicom vieme poslat udalost do Globalne
 
 	window.eventBus.emit('NAZOV_GLOBALNEHO_EVENTU', data)
 
+mixins
+------
+
+V pripade ze sa nas kod bude v aplikacii opakovat 2 a viac krat , je vhodne pre zachovanie REUSABLE pouzit mixins .
+
+Mixins je v podstate vlastna kniznica s datami a funkciami, ktoru vieme jednoducho pouzitv akomkolvek VUE komponente.
+
+Na ukazku jednoducheho filter mixin:
+
+.. code-block::
+
+	export default {
+		data() {
+			return {
+				data: [],
+				search: ''
+			}
+		},
+		computed: {
+			filteredItems() {
+				return this.data.filter( item => {
+					return item[this.searchColumn]
+						.toLowerCase()
+						.includes(this.search.toLowerCase())
+				})
+			}
+		},
+	}
+
+.. warning::
+
+	Nezabudnite importovat svoje Mixins do komponenty ::
+
+		    mixins: [filterMixin]
+
+Moment js
+---------
+
+Uprava resp. formatovanie datumu na FE tzn.  ze ked zo servera nepride naformatovany cas napr. packagom Carbon. N
+
+Nutne doinstalovat package :
+
+.. code-block:: console
+
+	npm install moment
+
+Potom staci do svojeho nejakeho Mixin prihodit funkciu na formatovanie napr. :
+
+..code-block::
+
+		import moment from 'moment'
+
+	    methods: {
+			niceDay(dateTime) {
+				return moment(dateTime).fromNow()
+			}
+		},
+
+Nasledne v komponente kde mame dotiahnuty mixin , tak staci vo vypise hodnoty zabalit do funkcie ``{{ niceDay( VALUE ) }}``

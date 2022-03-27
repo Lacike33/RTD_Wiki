@@ -13,6 +13,7 @@ Sumár praktickej dokumentácie a packegov 3. strán nájdeš `TU <https://githu
 	:maxdepth: 3
 
 	web/laravel/index
+	web/python/index
 	web/sphinx/index
 	web/tailwind/index
 	web/vue/index
