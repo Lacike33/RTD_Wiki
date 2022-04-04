@@ -246,6 +246,15 @@ Predtým, ako to urobíme, musíme znova spustiť proces zostavovania, pretože 
 
 	Aby sme nemuseli spúšťať ``npm run dev`` zakaždým, keď vykonáme zmenu, môžeme spustiť ``npm run watch``, ktorý nám umožní spustiť proces zostavovania hneď po uložení zmien.
 
+Import CSS from
+---------------
+
+V pripade ze mame hotovy FE, tak nema zmysel buildovat stale nove CSS a hotovy dizajn si vieme v hlavnom js subore ``app.js`` importovat
+
+.. code-block::
+
+	import './asset/css/mystyle.css'
+
 Vue router
 ==========
 

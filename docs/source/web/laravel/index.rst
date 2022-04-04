@@ -71,4 +71,5 @@ Namiesto použitia príznaku ``--git`` môžete tiež použiť príznak ``--gith
    mail
    sass
    tailwind
+   trix
    vue

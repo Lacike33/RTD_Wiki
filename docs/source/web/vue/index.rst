@@ -85,3 +85,4 @@ VUE dirctives
    :name: laravel
 
    webrebel
+   bestpractice

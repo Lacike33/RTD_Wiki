@@ -180,7 +180,7 @@ V prvom rade musime mat vyexportovane MARKDOWN komponenty do vlastnej struktury 
 Po vygenerovani sa komponenty nachadzaju v ``resources/views/vendor/mail``
 
 Kustomizacia CSS Markdown komponentov
-*************************************
+=====================================
 
 Vygenerovane komponenty obsahuju defaultny css subor ``default.css`` pre kazdu temu  ``resources/views/vendor/mail/html/themes`` ktoreho upravou sa zmeny prejavia automaticky.
 
@@ -245,38 +245,59 @@ Ak chcete na fronte e-mailovú správu, použite metódu frontu na priečke poš
 
 Táto metóda sa automaticky postará o stlačenie úlohy na frontu, aby sa správa odoslala na pozadí. Samozrejme, pred použitím tejto funkcie budete musieť nakonfigurovať svoje fronty `Queues <https://laravel.com/docs/9.x/queues>`.
 
-* [Admin-LTE](AdminLte)
-* [Ajax](Ajax)
-* [API](Api)
-* [Autentifikácia a Role](Autentifikacia)
-* [BotMan](Botman)
-* [Cache &  Events](Cache)
-* [Carbon](Carbon)
-* [Commands](Commands)
-* [Database](Database)
-* [Export & Import](Export)
-* [Fake dáta](Seed)
-* [Files](Files)
-* [Flash messages](Flash)
-* [Helper files](Helpers)
-* [Images](Images)
-* [Inštalácia](Install)
-* [Login cez sociálnu sieť](Login)
-* [Logovanie](Log)
-* [Mail verifikacia](MailVerify)
-* [Migrácia](Migrate)
-* [Middleware](Middleware)
-* [Module System](ModuleSystem)
-* [Multijazyčná stránka (Translate)](Multilanguage)
-* [Nasadenie app do produkčného prostredia](Start)
-* [Packages](Packages)
-* [Platobna brana](StripePayment)
-* [PDF wrapper](PDFwraper)
-* [Routing](Routing)
-* [Services](Services)
-* [Sťahovanie súborov](Download)
-* [Subdomain routing](SubdomainRouting)
-* [Traits](Trait)
-* [Valet](ValetPlugin)
+Mail verifikacia
+================
 
+**Laraval** ma v sebe uz zabudovanu funkcionalitu overovania mailov..
 
+Viac na webe Laravelu - `Mail verification <https://laravel.com/docs/9.x/verification#main-content>`_
+
+Konfiguracia
+------------
+
+Na odosielanie mailov je potrebne nakonfigurovat v subore ``.env`` potrebne atributy ktore je mozne nastavit aj na FAKE server.
+
+Verify Email
+------------
+
+** Postup ** po vygenerovani Auth Scaffolding ``php artisan make:auth``
+
+Implementovat rozhranie **MustVerifyEmail** do modelu ``User``
+
+.. code-block::
+
+   class User extends Authenticatable implements MustVerifyEmail
+   {
+       use Notifiable;
+
+       // ...
+   }
+
+Do potrebneho modelu pridaj IF ``use Illuminate\Contracts\Auth\MustVerifyEmail;``
+
+Pridaj verifikacnu Route do ``web.php``
+
+Do suboru ``routes >> web.php`` pridaj extra parameter
+
+.. code-block::
+
+   Auth::routes(['verify' => true]);
+
+Toto enabluje controller s názvom ``VerificationController.php``, ktorý je už dodávaný s Laravelom.
+
+3.Pre ostrenie vstupu neverifikovanym pridaj do konstruktoru daneho Controllera nazov middleware **verified**
+
+```
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
+```
+
+alebo /nove riesenie Laravel 7.*/
+```
+   Route::get('profile', function () {
+    // Only verified users may enter...
+
+   })->middleware('verified');
+```
