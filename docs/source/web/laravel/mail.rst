@@ -287,17 +287,18 @@ Toto enabluje controller s názvom ``VerificationController.php``, ktorý je už
 
 3.Pre ostrenie vstupu neverifikovanym pridaj do konstruktoru daneho Controllera nazov middleware **verified**
 
-```
+.. code-block::
+
     public function __construct()
     {
         $this->middleware(['auth', 'verified']);
     }
-```
 
 alebo /nove riesenie Laravel 7.*/
-```
+
+.. code-block::
+
    Route::get('profile', function () {
     // Only verified users may enter...
 
    })->middleware('verified');
-```
