@@ -12,6 +12,7 @@ Sumár praktickej dokumentácie a packegov 3. strán nájdeš `TU <https://githu
 	:name: web
 	:maxdepth: 3
 
+	web/bulma/index
 	web/laravel/index
 	web/python/index
 	web/sphinx/index
