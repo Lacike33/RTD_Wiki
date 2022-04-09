@@ -69,6 +69,7 @@ Namiesto použitia príznaku ``--git`` môžete tiež použiť príznak ``--gith
    api
    authentication
    mail
+   pdf
    sass
    tailwind
    trix

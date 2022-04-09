@@ -22,10 +22,10 @@ Email bude chodit cez zadany SMT server:
 .. code-block:: ini
 
    MAIL_DRIVER=smtp
-   MAIL_HOST=smtp.forpsi.com
-   MAIL_PORT=587
+   MAIL_HOST=smtp.m1.websupport.sk
+   MAIL_PORT=465
    MAIL_USERNAME=postmaster@lvconsult.sk
-   MAIL_PASSWORD=vBUP827_xM
+   MAIL_PASSWORD=Ye6cJx9.n|
    MAIL_ENCRYPTION=null
    MAIL_FROM_ADDRESS=postmaster@lvconsult.sk
    MAIL_FROM_NAME="LV consult s.r.o."
@@ -42,13 +42,15 @@ Pre zobrazenie mailov ako aj konfiguracnych udajov pouzi login na `mailtrap.io <
 	user = allacino@gmail.com
 	password =
 
+Je mozne vytvarat projekty a subinboxy.
+
 .. code-block:: ini
 
 	MAIL_MAILER=smtp
 	MAIL_HOST=smtp.mailtrap.io
-	MAIL_PORT=2525
-	MAIL_USERNAME=68fa6f3e3194c0
-	MAIL_PASSWORD=448c2b8dbfeddf
+	MAIL_PORT=465
+	MAIL_USERNAME=69dc9da0f35af5
+	MAIL_PASSWORD=cfdc030754ebed
 	MAIL_ENCRYPTION=tls
 
 Mailablle class
