@@ -137,6 +137,40 @@ alebo
                    ]);
    }
 
+.. note::
+
+	Pri tomto pouziti je potrebne mat na pamati ze sa subor musi fyzicky nachadzat.
+
+Odosielanie prilohy PDF
+-----------------------
+
+Vygenerovane PDF data vieme poslat v prilohe mailu aj bez potreby ulozenia na disk.
+
+Vtedy pouzijem nasledujucu build metodu :
+
+.. code-block:: php
+
+	public function build()
+	{
+		return $this->view('emails.orders.shipped')
+					->attachData($this->pdf, 'name.pdf', [
+						'mime' => 'application/pdf',
+					]);
+	}
+
+.. note::
+
+	PDF musi prist cez metodu ``$pdf->output()``
+
+Priklad:
+
+.. code-block::
+
+    $pdf = PDF::loadView('pdf.confirmTB', $data);
+	$pdf->save('invoice.pdf');
+
+	return $pdf->output();
+
 Odoslanie obrazku
 -----------------
 
