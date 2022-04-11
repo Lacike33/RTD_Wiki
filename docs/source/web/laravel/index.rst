@@ -74,3 +74,4 @@ Namiesto použitia príznaku ``--git`` môžete tiež použiť príznak ``--gith
    tailwind
    trix
    vue
+   qrcode
