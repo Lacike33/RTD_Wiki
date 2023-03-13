@@ -11,7 +11,7 @@ Inštalácia Via Composer
 	cd example-app
 	php artisan serve
 
-Vyvoju web aplikacii a to najma v tychto 2 frameworkov :
+Vyvoj web aplikacii v pythone sa praktizuje najma v tychto 2 frameworkoch :
 
 * Django
 * Flask
