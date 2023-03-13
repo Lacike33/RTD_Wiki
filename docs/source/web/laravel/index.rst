@@ -68,6 +68,7 @@ Namiesto použitia príznaku ``--git`` môžete tiež použiť príznak ``--gith
 
    api
    authentication
+   command
    mail
    pdf
    sass

@@ -2,17 +2,23 @@
 Python
 ******
 
-Instalcia ...
+Inštalácia Via Composer
+-------------------------
 
-Tu doplnim pokiny k instalacii ...
+.. code-block:: console
 
-Podrobnejsie sa viac vsak budeme venovat vyvoju web aplikacii a to 1 z tychto 2 frameworkov :
+	composer create-project laravel/laravel example-app
+	cd example-app
+	php artisan serve
+
+Vyvoju web aplikacii a to najma v tychto 2 frameworkov :
 
 * Django
 * Flask
 
 .. toctree::
    :maxdepth: 3
-   :name: python
+   :name: Python
 
    django
+   flask
